@@ -9,14 +9,14 @@ gulp.task('sass', function () {
   gulp.src(['./scss/bootstrap.scss'])
     .pipe(
       sass({
-        outputStyle: 'nested',  //nested (default), compact, compressed, or expanded
+        outputStyle: 'nested', //nested (default), compact, compressed, or expanded
         cascade: true, //是否美化
         remove: true,
         //是否删除不必要的前缀
       })
-        .on('error', sass.logError)
+      .on('error', sass.logError)
     )
-    .pipe(concat('./style.css'))
+    .pipe(concat('./bootstrap.css'))
     .pipe(autoprefixer({
       browsers: ['last 20 versions'],
       cascade: true,
@@ -27,7 +27,7 @@ gulp.task('sass', function () {
     .pipe(reload({
       stream: true
     }));
-  console.log('Sass文件更新成功 ' + new Date().getHours() + ':' + new Date().getMinutes() + ':' + new Date().getSeconds());
+  console.log('sass文件发生更新' + new Date().getHours() + ':' + new Date().getMinutes() + ':' + new Date().getSeconds());
 });
 
 gulp.task('default', ['sass'], function () {
