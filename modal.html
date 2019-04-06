@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bootstrap3.4.1学习</title>
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+</head>
+
+<body>
+  <div class="container">
+
+
+    <!-- 控制按钮 -->
+    <a href="#myModal" data-toggle="modal">演示模态框</a>
+
+    <!-- 模态框主体 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- 标题设置 -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">标题</h4>
+          </div>
+
+          <!-- 主要内容 -->
+          <div class="modal-body">这里是主要的内容</div>
+
+          <!-- 页脚设置 -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <!-- <button type="button" class="btn btn-primary">提交更改</button> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <a data-toggle="modal" href="test.html" data-target="#modal" rel="noopener noreferrer">请点击我</a>
+    <div id="modal-test">test</div>
+
+  </div>
+
+
+
+
+  <script src="/assets/js/jquery.js"></script>
+  <script src="/assets/js/bootstrap.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('#modal-test').load('/test.html span',);
+    })
+  </script>
+
+</body>
+
+</html>
