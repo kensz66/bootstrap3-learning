@@ -6,10 +6,10 @@ var gulp = require('gulp'),
   reload = browserSync.reload;
 
 gulp.task('sass', function () {
-  gulp.src(['./scss/_bootstrap.scss'])
+  gulp.src(['./scss/bootstrap.scss'])
     .pipe(
       sass({
-        outputStyle: 'nested', //nested (default), compact, compressed, or expanded
+        outputStyle: 'nested',  //nested (default), compact, compressed, or expanded
         cascade: true, //是否美化
         remove: true,
         //是否删除不必要的前缀
@@ -27,7 +27,7 @@ gulp.task('sass', function () {
     .pipe(reload({
       stream: true
     }));
-  console.log('Sass***文件发生改变' + new Date().getHours() + ':' + new Date().getMinutes() + ':' + new Date().getSeconds());
+  console.log('Sass文件更新成功 ' + new Date().getHours() + ':' + new Date().getMinutes() + ':' + new Date().getSeconds());
 });
 
 gulp.task('default', ['sass'], function () {
