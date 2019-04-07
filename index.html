@@ -6,7 +6,7 @@
   <title>Bootstrap 实例 - 响应式的列重置</title>
   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/assets/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -17,8 +17,7 @@
          box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>
-      <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;box-shadow:
-         inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+      <div class="col-xs-6 col-sm-3">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
           enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -28,9 +27,7 @@
           eiusmod tempor incididunt ut.
         </p>
       </div>
-
-      <div class="clearfix visible-lg"></div>
-
+      <!-- <div class="clearfix hidden-lg "></div> -->
       <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;
          box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -45,6 +42,90 @@
         </p>
       </div>
     </div>
+  </div>
+
+  <div class="container">
+    <div class="navbar">
+      <a class="navbar-brand" href="#">麟飞服饰</a>
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+
+        <li class="dropup">
+          <a href="#abc" class="btn dropdown-toggle" data-toggle="dropdown">产品与服务 <span class="caret"></span></a>
+
+          <ul class="dropdown-menu ">
+            <li class="dropdown-header">标题</li>
+            <li role="presentation">
+              <a role="menuitem" href="#" tabindex="-1">POLO</a>
+            </li>
+            <li role="presentation">
+              <a role="menuitem" href="#" tabindex="-1">圆领</a>
+            </li>
+            <li class="divider"></li>
+            <li role="presentation">
+              <a role="menuitem" href="#" tabindex="-1">V领</a>
+            </li>
+          </ul>
+
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">产品与服务 <span
+          class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1">POLO</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1">圆领</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1">V领</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- tab -->
+    <ul id="mytab" class="nav nav-tabs" data-toggle="tab" role="tablist">
+      <li><a href="#bulletin" data-toggle="tab" role="tab">公告</a></li>
+      <li><a href="#rule" data-toggle="tab" role="tab">规则</a></li>
+      <li><a href="#security" data-toggle="tab" role="tab">安全</a></li>
+      <li><a href="#welfare" data-toggle="tab" role="tab">公益</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade" id="bulletin">公告内容</div>
+      <div class="tab-pane fade in active" id="rule">规则公告</div>
+      <div class="tab-pane fade" id="security">安全论坛内容</div>
+      <div class="tab-pane fade" id="welfare">福利公告</div>
+    </div>
+    <script>
+      (function ($) {
+        $('myTab a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        })
+      })(jQuery);
+    </script>
+
+    <div class="divider"> </div>
+    <div class="alert alert-warning">注意</div>
+    <div class="alert alert-success">你好,成功!</div>
+    <div class="alert alert-info">info</div>
+    <div class="alert alert-danger">危险</div>
+
+
+    <div class="alert alert-info">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="false">&times;</button>
+      <strong>Title!</strong> Alert body ...
+    </div>
+
+
+
   </div>
 
 </body>
